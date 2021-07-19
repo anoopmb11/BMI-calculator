@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">BMI Calculator</h1>
+      <form>
+        <label for="units">Units</label>
+        <select name="units" id="units">
+          <option value="ft/kg" id="weightUnit">Cm/Kg</option>
+          <option value="cm/pounds" id="heightUnit">FT/Pounds</option>
+        </select>
+        <div>
+          <label for="heightTextInput">Height</label>
+          <input
+            type="range"
+            min="0"
+            max="250"
+            name="Height"
+            value="0"
+            id="heightRangeInput"
+          />
+          <input
+            type="number"
+            min="0"
+            max="250"
+            value="0"
+            name="Height"
+            id="heightTextInput"
+          />
+          <span id="heightMeasure">Cm</span>
+        </div>
+        <div>
+          <label for="Weight">Weight</label>
+          <input
+            type="range"
+            min="0"
+            max="250"
+            value="0"
+            name="Weight"
+            id="weightRangeInput"
+          />
+          <input
+            type="number"
+            min="0"
+            max="250"
+            value="0"
+            name="Weight"
+            id="weightTextInput"
+          />
+          <span id="weightMeasure">Kg</span>
+        </div>
+      </form>
+
+      <h3>Your BMI is <span id="value"></span></h3>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
